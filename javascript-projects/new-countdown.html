@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="timer">
+        
+    </div>
+
+    <script>
+        let timer;
+        clearInterval(timer);
+        let timerDate = new Date(2022,11,12 ,18,55,45);
+        console.log(timerDate);
+        let currentDate = new Date();
+        console.log(currentDate);
+        // let s = 1000;
+        // let m = s * 60;
+        // let h = m * 60;
+        // let d = h * 24;
+        let remain =timerDate - currentDate;
+        console.log(remain);
+        function st(){
+        let n = new Date()
+        let remain =timerDate - n;
+        console.log(remain);
+        // if(remain < 0){
+        //     clearInterval(timer);
+        //     document.querySelector('timer').innerHTML = "reached";
+        // }
+        var days = Math.floor(remain /60 / 60 / 24)%365;
+        var hours = Math.floor(remain / 60 / 60 / 60)%24;
+        var minutes = Math.floor(remain / 60 / 60)%60;
+        var seconds = Math.floor(remain / 60 )%60;
+        
+        document.querySelector('.timer').innerHTML = `${days}day : ${hours}h : ${minutes}m : ${seconds}s`;
+        }
+        setInterval(st,1000);
+        
+    </script>
+</body>
+</html>

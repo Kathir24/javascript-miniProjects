@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: powderblue;
+        }
+        .red{background-color: red;}
+        .green{background-color: green;}
+        .grey{background-color: grey;}
+        .yellow{background-color: yellow;}
+        .pink{background-color:pink;}
+    </style>
+</head>
+<body>
+    <!-- <div class="box">
+        <button type="button" id="red" onclick="clrRed()">red</button>
+        <button type="button" id="green" onclick="clrGreen()">green</button>
+        <button type="button" id="yellow" onclick="clrYellow()">yellow</button>
+        <button type="button" id="grey" onclick="clrGrey()">grey</button>
+
+        <select name="" id="select" onchange="change()">
+            <option value="0" >--select--</option>
+            <option value="1" >red</option>
+            <option value="2">green</option>
+            <option value="3">yellow</option>
+            <option value="4">grey</option>
+        </select>
+    </div> -->
+    <div class="container">
+        <div class="img1">
+            <img src="./slider/images/width-1.jpg" alt="">
+        </div>
+        <div class="img2">
+            <img src="./slider/images/width-2.jpg">
+        </div>
+    </div>
+    <button type="button" id="btn">swap</button>
+
+    <script>
+        let img1 = document.querySelector('.img1');
+        let img2 = document.querySelector('.img2');
+
+        let x = 1;
+        document.getElementById('btn').addEventListener('click',()=>{
+            if(x != 0){
+                x=0;
+                img1.innerHTML ='<img src="./slider/images/width-2.jpg">';
+                img2.innerHTML ='<img src="./slider/images/width-1.jpg">';
+                console.log(x)
+            }else if(x == 0){
+                img1.innerHTML ='<img src="./slider/images/width-1.jpg">';
+                img2.innerHTML ='<img src="./slider/images/width-2.jpg">';
+                x=1;
+                console.log(x);
+            }
+        })
+        // let box = document.querySelector('.box');
+        // function clrRed(){
+        //     box.setAttribute('class','box red');
+        // }
+        // function clrGreen(){
+        //     box.setAttribute('class','box green');
+        // }
+        // function clrYellow(){
+        //     box.setAttribute('class','box yellow');
+        // }
+        // function clrGrey(){
+        //     box.setAttribute('class','box grey');
+        // }
+        // // box.addEventListener('click',()=>{
+        // //     box.setAttribute('style','background-color:#fff;');
+        // // })
+        // function change(){
+        //     let main = document.querySelector('#select');
+        //     if(main.value == "1"){
+        //         box.setAttribute('class','box red');
+        //     }else if(main.value == "2"){
+        //         box.setAttribute('class','box green');
+        //     }else if(main.value == "3"){
+        //         box.setAttribute('class','box yellow');
+        //     }else if(main.value == "4"){
+        //         box.setAttribute('class','box grey');
+        //     }
+        // }
+    </script>
+</body>
+</html>

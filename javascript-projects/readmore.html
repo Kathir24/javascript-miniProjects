@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Read More/Read Less </title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        .read{
+            display: none;
+        }
+        #btn{
+            color: royalblue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugit at quam illo nam aspernatur natus ullam optio. Consequuntur explicabo ut iusto suscipit quis eum modi a temporibus, quaerat deleniti! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit totam nisi sed ad perspiciatis fugit enim voluptate ea quia sit consectetur dolores incidunt obcaecati, inventore ut voluptatem accusamus facere! Culpa.<span class="read">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perferendis voluptatum est debitis magni, incidunt provident similique atque libero. Hic harum vitae modi dolor, quo sapiente sint beatae iure impedit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt dolorum debitis provident cupiditate, voluptas, quis soluta possimus neque ea temporibus ad ab fugiat beatae asperiores dicta, porro dignissimos fuga repudiandae.</span>
+
+            <span id="btn">read more</span>
+        
+    </div>
+    <script>
+        let i = true;
+        console.log(!i);
+        document.getElementById('btn').addEventListener('click',()=>{ 
+            if(!i){
+                document.querySelector('.read').setAttribute('style','display:inline;');
+                document.querySelector('#btn').innerText = 'read less';
+                i=1;
+            }else{
+                document.querySelector('.read').setAttribute('style','display:none;');
+                document.querySelector('#btn').innerText = 'read more';
+                i=0;
+            }
+        })
+    </script>
+
+</body>
+</html>

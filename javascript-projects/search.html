@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa veritatis sunt dicta omnis aliquam quis molestiae laborum totam provident maiores numquam minus iusto impedit ipsam autem, architecto explicabo culpa suscipit.
+    </div>
+
+    <div class="jj">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis rerum, autem adipisci enim rem exercitationem non consequuntur itaque asperiores ea suscipit reprehenderit culpa ab aut, esse earum perspiciatis doloribus eaque!
+    </div>
+
+    <input type="search" id="search"> <br>
+
+    <button type="button" id="btn">click</button>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', ()=>{
+            let searchValue = document.getElementById('search').value;
+            let text = document.querySelector('.text');
+
+
+            let ex = new RegExp(searchValue,'gi');
+            text.innerHTML = text.textContent.replace(ex,value => `<mark>${value}</mark>`);
+        })
+    </script>
+</body>
+</html>
